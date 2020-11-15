@@ -11,7 +11,7 @@ variables:
   azureServiceConnectionId: '063e1a10-1a98-4581-a52b-231b87d5d88d'
   
   # Web app name
-  webAppName: 'BloodPressureApp'
+  webAppName: 'JohnsBloodPressureApp'
 
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
