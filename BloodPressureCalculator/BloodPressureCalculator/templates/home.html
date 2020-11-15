@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BloodPressureApp</title>
+</head>
+<body>
+    <h1>Welcome to Blood Pressure App</h1>
+    <div class="content-section">
+        <form method="POST" action="">
+            {{ form.hidden_tag() }}
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4">Fill out your details</legend>
+                <div class="form-group">
+                    {{form.name.label(class="form-control-label")}}
+                    {% if form.name.errors%}
+                        {{ form.name(class="form-control form-form-control-lg is-invalid") }}
+                        <div class="ïnvalid-feedback">
+                            {% for error in form.name.errors%}
+                                <span> {{ error}}</span>
+                            {%endfor%}
+                        </div>
+                    {%else%}
+                    {{form.name(class="form-control form-control-lg")}}
+                    {%endif%}
+
+                </div>
+                <div class="form-group">
+                    {{form.systolic_level.label(class="form-control-label")}}
+                    {% if form.systolic_level.errors%}
+                        {{ form.systolic_level(class="form-control form-form-control-lg is-invalid") }}
+                        <div class="ïnvalid-feedback">
+                            {% for error in form.systolic_level.errors%}
+                                <span> {{ error}}</span>
+                            {%endfor%}
+                        </div>
+                    {%else%}
+                    {{form.systolic_level(class="form-control form-control-lg")}}
+                    {%endif%}
+
+                </div>
+                <div class="form-group">
+                    {{form.diastolic_level.label(class="form-control-label")}}
+                    {% if form.diastolic_level.errors%}
+                        {{ form.diastolic_level(class="form-control form-form-control-lg is-invalid") }}
+                        <div class="ïnvalid-feedback">
+                            {% for error in form.diastolic_level.errors%}
+                                <span> {{ error}}</span>
+                            {%endfor%}
+                        </div>
+                    {%else%}
+                    {{form.diastolic_level(class="form-control form-control-lg")}}
+                    {%endif%}
+
+                </div>
+                <div class="form-group">
+                    {{ form.submit(class="btn btn-outline-info") }}
+                </div>
+
+            </fieldset>
+        </form>
+    </div>
+
+    <div>
+        {% for message in get_flashed_messages() %}
+            <p>{{message}}</p>
+        {% endfor %}
+    </div>
+
+</body>
+</html>
