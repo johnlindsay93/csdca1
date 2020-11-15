@@ -13,6 +13,7 @@ posts = [
     }
 ]
 
+
 @app.route('/', methods=['GET', 'POST'])
 def home():
     form = BloodPressureForm()
