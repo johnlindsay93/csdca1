@@ -44,8 +44,9 @@ stages:
       displayName: 'Running Unit Tests'
 
   - job: Build Artefact
-    displayName: 'Archive Files'
+    steps:
     - task: ArchiveFiles@2
+      displayName: 'Archive Files'
       inputs:
         rootFolderOrFile: '$(projectRoot)'
         includeRootFolder: false
