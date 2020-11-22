@@ -1,5 +1,5 @@
 import unittest
-from calculations import Calculations
+from csdca1.calculations import Calculations
 
 
 class CalculationsTest(unittest.TestCase):
