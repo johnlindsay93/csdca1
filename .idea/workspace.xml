@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dce63941-398d-4531-9f3c-77ce5636347d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/azure-pipelines.yml" beforeDir="false" afterPath="$PROJECT_DIR$/azure-pipelines.yml" afterDir="false" />
-    </list>
+    <list default="true" id="dce63941-398d-4531-9f3c-77ce5636347d" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,8 +24,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/azure-pipelines-1.yml">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="68">
-                  <caret line="25" column="22" lean-forward="true" selection-start-line="24" selection-start-column="2" selection-end-line="25" selection-end-column="22" />
+                <state relative-caret-position="357">
+                  <caret line="42" column="34" lean-forward="true" selection-start-line="41" selection-start-column="8" selection-end-line="42" selection-end-column="34" />
                 </state>
               </provider>
             </entry>
@@ -66,8 +64,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/azure-pipelines.yml">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="374">
-                  <caret line="37" column="41" selection-start-line="36" selection-start-column="6" selection-end-line="37" selection-end-column="41" />
+                <state relative-caret-position="268">
+                  <caret line="34" column="34" selection-start-line="34" selection-start-column="34" selection-end-line="34" selection-end-column="34" />
                 </state>
               </provider>
             </entry>
@@ -376,15 +374,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/azure-pipelines-1.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="25" column="22" lean-forward="true" selection-start-line="24" selection-start-column="2" selection-end-line="25" selection-end-column="22" />
+        <state relative-caret-position="357">
+          <caret line="42" column="34" lean-forward="true" selection-start-line="41" selection-start-column="8" selection-end-line="42" selection-end-column="34" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/azure-pipelines.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="37" column="41" selection-start-line="36" selection-start-column="6" selection-end-line="37" selection-end-column="41" />
+        <state relative-caret-position="268">
+          <caret line="34" column="34" selection-start-line="34" selection-start-column="34" selection-end-line="34" selection-end-column="34" />
         </state>
       </provider>
     </entry>
