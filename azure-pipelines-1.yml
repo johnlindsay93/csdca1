@@ -83,5 +83,5 @@ stages:
             displayName: 'Deploy Azure Web App : '
             inputs:
               azureSubscription: $(azureServiceConnectionId)
-              appName: $(webAppName)
+              appName: $(WebAppNameTest)
               package: $(Pipeline.Workspace)/drop/$(Build.BuildId).zip
