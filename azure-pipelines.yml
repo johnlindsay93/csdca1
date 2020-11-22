@@ -44,10 +44,10 @@ stages:
       displayName: 'Running Unit Tests'
 
   - job: Build Artefact
+    displayName: 'Archive Files'
+    dependsOn: Run Tests
+    condition: succeeded()
     - task: ArchiveFiles@2
-      displayName: 'Archive Files'
-      dependsOn: Run Tests
-      condition: succeeded()
       inputs:
         rootFolderOrFile: '$(projectRoot)'
         includeRootFolder: false
