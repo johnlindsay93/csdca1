@@ -45,8 +45,6 @@ stages:
 
   - job: Build Artefact
     displayName: 'Archive Files'
-    dependsOn: Run Tests
-    condition: succeeded()
     - task: ArchiveFiles@2
       inputs:
         rootFolderOrFile: '$(projectRoot)'
