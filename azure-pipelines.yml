@@ -1,6 +1,6 @@
-# Python package
-# Create and test a Python package on multiple Python versions.
-# Add steps that analyze code, save the dist with the build record, publish to a PyPI-compatible index, and more:
+# Python to Linux Web App on Azure
+# Build your Python project and deploy it to Azure as a Linux Web App.
+# Change python version to one thats appropriate for your application.
 # https://docs.microsoft.com/azure/devops/pipelines/languages/python
 
 trigger:
@@ -8,29 +8,40 @@ trigger:
 
 pool:
   vmImage: 'ubuntu-latest'
-strategy:
-  matrix:
-    Python27:
-      python.version: '2.7'
-    Python35:
-      python.version: '3.5'
-    Python36:
-      python.version: '3.6'
-    Python37:
-      python.version: '3.7'
 
-steps:
-- task: UsePythonVersion@0
-  inputs:
-    versionSpec: '$(python.version)'
-  displayName: 'Use Python $(python.version)'
+variables:
+  buildConfiguration: 'Release'
+# Project root folder. Point to the folder containing manage.py file.
+  projectRoot: $(System.DefaultWorkingDirectory)
 
-- script: |
-    python -m pip install --upgrade pip
-    pip install -r requirements.txt
-  displayName: 'Install dependencies'
 
-- script: |
-    pip install pytest pytest-azurepipelines
-    python -m pytest tests/
-  displayName: 'pytest'
+stages:
+- stage: Build
+  displayName: Build Stage
+  jobs:
+  - job: Run Tests
+    - script: |
+      python -m pip install --upgrade pip
+      pip install -r requirements.txt
+      workingDirectory: $(projectRoot)
+      displayName: 'Install dependencies'
+
+    - script: |
+      python -m pytest tests/
+      displayName: 'Running Unit Tests'
+
+  - job: Build Artefact
+    - task: ArchiveFiles@2
+      displayName: 'Archive Files'
+      dependsOn: Run Tests
+      condition: succeeded()
+      inputs:
+        rootFolderOrFile: '$(projectRoot)'
+        includeRootFolder: false
+        archiveType: zip
+        archiveFile: $(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip
+        replaceExistingArchive: true
+
+    - upload: $(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip
+      displayName: 'Upload package'
+      artifact: drop
