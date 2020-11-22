@@ -14,7 +14,7 @@
     <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/bakazure-pipelines.yml">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="425">
@@ -23,10 +23,10 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/azure-pipelines-1.yml">
               <provider selected="true" editor-type-id="text-editor">
-                <state>
+                <state relative-caret-position="204">
                   <caret line="42" column="34" lean-forward="true" selection-start-line="41" selection-start-column="8" selection-end-line="42" selection-end-column="34" />
                 </state>
               </provider>
@@ -66,8 +66,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/azure-pipelines.yml">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="489">
-                  <caret line="46" column="32" selection-start-line="46" selection-start-column="32" selection-end-line="46" selection-end-column="32" />
+                <state relative-caret-position="251">
+                  <caret line="32" column="15" selection-start-line="32" selection-start-column="15" selection-end-line="32" selection-end-column="15" />
                 </state>
               </provider>
             </entry>
@@ -367,6 +367,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/azure-pipelines-1.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="42" column="34" lean-forward="true" selection-start-line="41" selection-start-column="8" selection-end-line="42" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/bakazure-pipelines.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
@@ -374,17 +381,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/azure-pipelines-1.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="42" column="34" lean-forward="true" selection-start-line="41" selection-start-column="8" selection-end-line="42" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/azure-pipelines.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="489">
-          <caret line="46" column="32" selection-start-line="46" selection-start-column="32" selection-end-line="46" selection-end-column="32" />
+        <state relative-caret-position="251">
+          <caret line="32" column="15" selection-start-line="32" selection-start-column="15" selection-end-line="32" selection-end-column="15" />
         </state>
       </provider>
     </entry>
