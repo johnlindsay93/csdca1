@@ -16,12 +16,20 @@ variables:
 
   # Azure Resource Manager connection created during pipeline creation
   azureServiceConnectionId: '7c748cad-025d-415d-9a89-b609cbb88e85'
-
+  # Python version: 3.7
+  pythonVersion: '3.7'
 stages:
 - stage: Build
   displayName: Build Stage
   jobs:
   - job: Run Tests
+
+    steps:
+    - task: UsePythonVersion@0
+      inputs:
+        versionSpec: '$(pythonVersion)'
+      displayName: 'Use python $(pythonVersion)'
+
     - script: |
       python -m pip install --upgrade pip
       pip install -r requirements.txt
