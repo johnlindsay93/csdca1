@@ -26,7 +26,7 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/azure-pipelines-1.yml">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="119">
+                <state relative-caret-position="68">
                   <caret line="25" column="22" lean-forward="true" selection-start-line="24" selection-start-column="2" selection-end-line="25" selection-end-column="22" />
                 </state>
               </provider>
@@ -66,8 +66,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/azure-pipelines.yml">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="289">
-                  <caret line="32" column="4" selection-start-line="32" selection-start-column="4" selection-end-line="32" selection-end-column="4" />
+                <state relative-caret-position="374">
+                  <caret line="37" column="41" selection-start-line="36" selection-start-column="6" selection-end-line="37" selection-end-column="41" />
                 </state>
               </provider>
             </entry>
@@ -376,15 +376,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/azure-pipelines-1.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
+        <state relative-caret-position="68">
           <caret line="25" column="22" lean-forward="true" selection-start-line="24" selection-start-column="2" selection-end-line="25" selection-end-column="22" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/azure-pipelines.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="32" column="4" selection-start-line="32" selection-start-column="4" selection-end-line="32" selection-end-column="4" />
+        <state relative-caret-position="374">
+          <caret line="37" column="41" selection-start-line="36" selection-start-column="6" selection-end-line="37" selection-end-column="41" />
         </state>
       </provider>
     </entry>
