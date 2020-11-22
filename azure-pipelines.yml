@@ -22,7 +22,7 @@ stages:
 - stage: Build
   displayName: Build Stage
   jobs:
-  - job: Run Tests
+  - job: RunTests
 
     steps:
     - task: UsePythonVersion@0
@@ -43,7 +43,7 @@ stages:
         python -m pytest tests/
       displayName: 'Running Unit Tests'
 
-  - job: Build Artefact
+  - job: BuildArtefact
     steps:
     - task: ArchiveFiles@2
       displayName: 'Archive Files'
