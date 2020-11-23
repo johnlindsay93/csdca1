@@ -14,10 +14,10 @@
     <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
         <leaf>
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/azure-pipelines.yml">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="911">
+                <state relative-caret-position="659">
                   <caret line="84" column="70" selection-start-line="84" selection-start-column="70" selection-end-line="84" selection-end-column="70" />
                 </state>
               </provider>
@@ -41,11 +41,11 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/azure-pipelines-1.yml">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="676">
-                  <caret line="86" column="70" lean-forward="true" selection-start-line="67" selection-start-column="2" selection-end-line="86" selection-end-column="70" />
+                <state relative-caret-position="833">
+                  <caret line="49" column="26" lean-forward="true" selection-start-line="49" selection-start-column="26" selection-end-line="49" selection-end-column="26" />
                 </state>
               </provider>
             </entry>
@@ -66,8 +66,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/azure-pipelines.yml">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="153">
-                  <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
+                <state relative-caret-position="527">
+                  <caret line="67" column="30" selection-start-line="67" selection-start-column="30" selection-end-line="67" selection-end-column="30" />
                 </state>
               </provider>
             </entry>
@@ -83,6 +83,11 @@
         <option value="Python Script" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>vmim</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -376,15 +381,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/azure-pipelines-1.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="676">
-          <caret line="86" column="70" lean-forward="true" selection-start-line="67" selection-start-column="2" selection-end-line="86" selection-end-column="70" />
+        <state relative-caret-position="833">
+          <caret line="49" column="26" lean-forward="true" selection-start-line="49" selection-start-column="26" selection-end-line="49" selection-end-column="26" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/azure-pipelines.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
+        <state relative-caret-position="527">
+          <caret line="67" column="30" selection-start-line="67" selection-start-column="30" selection-end-line="67" selection-end-column="30" />
         </state>
       </provider>
     </entry>
