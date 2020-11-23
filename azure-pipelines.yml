@@ -57,3 +57,29 @@ stages:
     - upload: $(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip
       displayName: 'Upload package'
       artifact: drop
+
+- stage: DeployToTest
+  displayName: 'Deploy to the Test Environment'
+  dependsOn: Build
+  condition: succeeded()
+  jobs:
+  - deployment: DeploymentJob
+    pool:
+      vmImage: $(vmImageName)
+    environment: $(environmentName)
+    strategy:
+      runOnce:
+        deploy:
+          steps:
+
+          - task: UsePythonVersion@0
+            inputs:
+              versionSpec: '$(pythonVersion)'
+            displayName: 'Use Python version'
+
+          - task: AzureWebApp@1
+            displayName: 'Deploy Azure Web App : '
+            inputs:
+              azureSubscription: $(azureServiceConnectionId)
+              appName: $(WebAppNameTest)
+              package: $(Pipeline.Workspace)/drop/$(Build.BuildId).zip
