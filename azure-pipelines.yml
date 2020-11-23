@@ -55,7 +55,7 @@ stages:
 
   - job: BuildArtefact
     dependsOn: RunTests
-    condition: RunTests
+    condition: succeeded()
     steps:
     - task: ArchiveFiles@2
       displayName: 'Archive files'
