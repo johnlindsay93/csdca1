@@ -54,6 +54,8 @@ stages:
       displayName: 'Running Unit Tests'
 
     - script: |
+        python -m venv antenv
+        source antenv/bin/activate
         pip install behave
         pip install selenium
         behave
