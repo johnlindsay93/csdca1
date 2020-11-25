@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dce63941-398d-4531-9f3c-77ce5636347d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/BloodPressureCalculator/BloodPressureCalculator/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BloodPressureCalculator/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/features/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/BloodPressureCalculator/BloodPressureCalculator/features/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/features/calculations.feature" beforeDir="false" afterPath="$PROJECT_DIR$/BloodPressureCalculator/BloodPressureCalculator/features/calculations.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/features/chromedriver.exe" beforeDir="false" afterPath="$PROJECT_DIR$/BloodPressureCalculator/BloodPressureCalculator/features/chromedriver.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/features/environment.py" beforeDir="false" afterPath="$PROJECT_DIR$/BloodPressureCalculator/BloodPressureCalculator/features/environment.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/features/steps/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/BloodPressureCalculator/BloodPressureCalculator/features/steps/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/features/steps/calculation_defs.py" beforeDir="false" afterPath="$PROJECT_DIR$/BloodPressureCalculator/BloodPressureCalculator/features/steps/calculation_defs.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/azure-pipelines.yml" beforeDir="false" afterPath="$PROJECT_DIR$/azure-pipelines.yml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -31,11 +23,11 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/azure-pipelines.yml">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="803">
-                  <caret line="51" column="26" selection-start-line="51" selection-start-column="26" selection-end-line="51" selection-end-column="26" />
+                <state relative-caret-position="472">
+                  <caret line="95" column="41" selection-start-line="95" selection-start-column="41" selection-end-line="95" selection-end-column="41" />
                 </state>
               </provider>
             </entry>
@@ -45,33 +37,6 @@
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="85">
                   <caret line="5" selection-start-line="5" selection-end-line="5" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/BloodPressureCalculator/BloodPressureCalculator/features/calculations.feature">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="136">
-                  <caret line="8" column="33" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/BloodPressureCalculator/BloodPressureCalculator/features/environment.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="17">
-                  <caret line="1" column="10" selection-start-line="1" selection-start-column="10" selection-end-line="1" selection-end-column="10" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/BloodPressureCalculator/BloodPressureCalculator/features/steps/calculation_defs.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="476">
-                  <caret line="28" column="45" selection-start-line="28" selection-start-column="45" selection-end-line="28" selection-end-column="45" />
                 </state>
               </provider>
             </entry>
@@ -140,7 +105,6 @@
         <option value="$PROJECT_DIR$/templates/result.html" />
         <option value="$PROJECT_DIR$/tests/__init__.py" />
         <option value="$PROJECT_DIR$/__init__.py" />
-        <option value="$PROJECT_DIR$/azure-pipelines.yml" />
         <option value="$PROJECT_DIR$/tests/test_calculations.py" />
         <option value="$PROJECT_DIR$/tests/features/calculations.feature.py" />
         <option value="$PROJECT_DIR$/tests/step_defs/calculation_defs.py" />
@@ -153,6 +117,7 @@
         <option value="$PROJECT_DIR$/application.py" />
         <option value="$PROJECT_DIR$/templates/base.html" />
         <option value="$PROJECT_DIR$/requirements.txt" />
+        <option value="$PROJECT_DIR$/azure-pipelines.yml" />
       </list>
     </option>
   </component>
@@ -188,6 +153,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\John\Desktop\github\csdca1\BloodPressureCalculator\BloodPressureCalculator" />
       <recent name="C:\Users\John\Desktop\github\csdca1\" />
       <recent name="C:\Users\John\Desktop\github\csdca1\tests\features\" />
     </key>
@@ -324,6 +290,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="2992" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14330874" />
       <window_info id="Structure" order="1" weight="0.25" />
@@ -465,19 +432,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/azure-pipelines.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="803">
-          <caret line="51" column="26" selection-start-line="51" selection-start-column="26" selection-end-line="51" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" selection-start-line="2" selection-end-line="2" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BloodPressureCalculator/BloodPressureCalculator/features/environment.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="10" selection-start-line="1" selection-start-column="10" selection-end-line="1" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.coverage">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/calculations.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -486,10 +456,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BloodPressureCalculator/BloodPressureCalculator/features/environment.py">
+    <entry file="file://$PROJECT_DIR$/azure-pipelines.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="10" selection-start-line="1" selection-start-column="10" selection-end-line="1" selection-end-column="10" />
+        <state relative-caret-position="472">
+          <caret line="95" column="41" selection-start-line="95" selection-start-column="41" selection-end-line="95" selection-end-column="41" />
         </state>
       </provider>
     </entry>
