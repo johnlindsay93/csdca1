@@ -3,3 +3,5 @@ flask-wtf
 coverage
 pytest
 pytest-bdd
+selenium
+behave
