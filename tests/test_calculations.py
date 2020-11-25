@@ -32,7 +32,7 @@ class CalculationsTest(unittest.TestCase):
         systolic = 110
         diastolic = 85
         response = self.calculations.calculate_blood_pressure(systolic, diastolic)
-        self.assertEqual(response, "Pre-High")
+        self.assertEqual(response, "Pr-High")
 
     def test_high_bloodpressure_with_lower_diastolic(self):
         systolic = 160
