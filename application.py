@@ -19,11 +19,5 @@ def home():
         return render_template('result.html', value=result, form=form)
     return render_template('home.html', form=form)
 
-@app.route('/result', methods=['GET', 'POST'])
-def result():
-
-    return render_template('result.html')
-
-
 if __name__=='__main__':
     app.run()
