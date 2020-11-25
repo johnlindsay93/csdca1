@@ -1,5 +1,5 @@
 flask
-flask_wtf
+Flask_wtf
 coverage
 pytest
 pytest-bdd
