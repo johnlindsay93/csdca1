@@ -53,10 +53,10 @@ stages:
         python -m pytest tests/
       displayName: 'Running Unit Tests'
 
-    -script: |
-      pip install behave
-      behave
-     displayName: 'Running BDD Tests'
+    - script: |
+        pip install behave
+        behave
+      displayName: 'Running BDD Tests'
      
     - task: ArchiveFiles@2
       displayName: 'Archive files'
