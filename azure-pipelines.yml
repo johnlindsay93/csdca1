@@ -55,9 +55,10 @@ stages:
 
     -script: |
       pip install behave
+      pip install selenium
       behave
      displayName: 'Running BDD Tests'
-     
+
     - task: ArchiveFiles@2
       displayName: 'Archive files'
       inputs:
