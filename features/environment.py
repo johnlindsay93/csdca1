@@ -14,11 +14,12 @@ from webdriver_manager.chrome import ChromeDriverManager
 chrome_options = Options()
 
 # driver = webdriver.Chrome(ChromeDriverManager().install())
+chrome_options.add_argument("no-sandbox")
 chrome_options.add_argument("--headless")
 chrome_options.add_argument('--no-proxy-server')
 chrome_options.add_argument("--proxy-server='direct://'")
 chrome_options.add_argument("--proxy-bypass-list=*")
-chrome_options.add_argument("no-sandbox")
+
 
 def before_all(context):
     context.server = simple_server.WSGIServer(("", 5000), WSGIRequestHandler)
