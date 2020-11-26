@@ -5,12 +5,15 @@ from wsgiref.simple_server import WSGIRequestHandler
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from application import app
+from webdriver_manager.chrome import ChromeDriverManager
 
 # Use the chrome driver specific to your version of Chrome browser and put it in ./driver directory
-CHROME_DRIVER = os.path.join(os.path.join(os.path.dirname(__file__), 'driver'), 'chromedriver.exe')
+CHROME_DRIVER = webdriver.Chrome(executable_path="C:\\bin\\chromedriver_win32\\chromedriver")
 dir_path = os.path.dirname(os.path.realpath(__file__))
 chromedriver = dir_path + "/chromedriver"
 chrome_options = Options()
+
+driver = webdriver.Chrome(ChromeDriverManager().install())
 chrome_options.add_argument("--headless")
 chrome_options.add_argument('--no-proxy-server')
 chrome_options.add_argument("--proxy-server='direct://'")
@@ -22,7 +25,7 @@ def before_all(context):
     context.pa_app = threading.Thread(target=context.server.serve_forever)
     context.pa_app.start()
 
-    context.browser = webdriver.Chrome(options=chrome_options, executable_path=chromedriver)
+    context.browser =  webdriver.Chrome(ChromeDriverManager().install())
     context.browser.set_page_load_timeout(time_to_wait=200)
 
 def after_all(context):
