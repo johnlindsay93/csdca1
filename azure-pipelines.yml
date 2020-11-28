@@ -70,13 +70,14 @@ stages:
         python -m pytest tests/ --junitxml=$(System.DefaultWorkingDirectory)/test.xml --cov=. --cov-report=html --cov-report=xml
       displayName: 'Running Unit Tests'
     - task: PublishTestResults@2
+      displayName: "Publishing Test Results"
       inputs:
         testResultsFormat: 'JUnit'
-        testResultsFiles: '**/TEST-*.xml'
-        searchFolder: '$(System.DefaultWorkingDirectory)/test.xml'
+        testResultsFiles: '$(System.DefaultWorkingDirectory)/test.xml'
         failTaskOnFailedTests: true
-        testRunTitle: 'Running test'
+        testRunTitle: '010'
     - task: PublishCodeCoverageResults@1
+      displayName: "Publishing Coverage Results"
       inputs:
         codeCoverageTool: 'Cobertura'
         summaryFileLocation: '$(System.DefaultWorkingDirectory)/coverage.xml'
