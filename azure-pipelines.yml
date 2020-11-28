@@ -70,9 +70,9 @@ stages:
     - task: PublishCodeCoverageResults@1
       inputs:
         codeCoverageTool: 'Cobertura'
-        summaryFileLocation: '$(System.DefaultWorkingDirectory)/csdca1/coverage.xml'
-        pathToSources: '$(System.DefaultWorkingDirectory)/csdca1'
-        reportDirectory: '$(System.DefaultWorkingDirectory)/csdca1/htmlcov/'
+        summaryFileLocation: '$(System.DefaultWorkingDirectory)/coverage.xml'
+        pathToSources: '$(System.DefaultWorkingDirectory)/'
+        reportDirectory: '$(System.DefaultWorkingDirectory)/htmlcov/'
         failIfCoverageEmpty: true
     
     - script: |
