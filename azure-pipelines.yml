@@ -92,6 +92,8 @@ stages:
         pip install selenium
         behave
       displayName: 'Running BDD Tests'
+    - task: SonarCloudAnalyze@1
+      displayName: "Running Sonar Cloud Analysis"
     - task: ArchiveFiles@2
       displayName: 'Archive files'
       inputs:
