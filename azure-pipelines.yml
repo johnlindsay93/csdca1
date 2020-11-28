@@ -56,6 +56,8 @@ stages:
         pip install -r requirements.txt
         wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
         sudo apt install ./google-chrome-stable_current_amd64.deb
+        curl '<sonarqube or sonarcloud url>/static/cpp/build-wrapper-linux-x86.zip' --output build-wrapper.zip
+        unzip build-wrapper.zip
       workingDirectory: $(projectRoot)
       displayName: "Install requirements"
 
@@ -72,14 +74,8 @@ stages:
         behave
       displayName: 'Running BDD Tests'
 
-    - task: ArchiveFiles@2
-      displayName: 'Archive files'
-      inputs:
-        rootFolderOrFile: '$(projectRoot)'
-        includeRootFolder: false
-        archiveType: zip
-        archiveFile: $(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip
-        replaceExistingArchive: true
+    - script: |
+        build-wrapper-linux-x86/build-wrapper-linux-x86-64 --out-dir <output directory> make clean all
     - task: SonarCloudAnalyze@1
     - upload: $(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip
       displayName: 'Upload package'
