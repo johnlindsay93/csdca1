@@ -73,9 +73,14 @@ stages:
         pip install selenium
         behave
       displayName: 'Running BDD Tests'
-
-    - script: |
-        build-wrapper-linux-x86/build-wrapper-linux-x86-64 --out-dir $(Build.ArtifactStagingDirectory) make clean all
+    - task: ArchiveFiles@2
+      displayName: 'Archive files'
+      inputs:
+        rootFolderOrFile: '$(projectRoot)'
+        includeRootFolder: false
+        archiveType: zip
+        archiveFile: $(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip
+        replaceExistingArchive: true    
     - task: SonarCloudAnalyze@1
     - upload: $(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip
       displayName: 'Upload package'
