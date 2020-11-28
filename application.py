@@ -1,6 +1,6 @@
 from flask import Flask, render_template, url_for, flash, redirect, request
-from config import Config
 from forms import BloodPressureForm
+from config import Config
 from calculations import Calculations
 
 app = Flask(__name__)
@@ -18,6 +18,7 @@ def home():
         result = calculations.calculate_blood_pressure(systolic_level, diastolic_level)
         return render_template('result.html', value=result, form=form)
     return render_template('home.html', form=form)
+
 
 if __name__=='__main__':
     app.run()

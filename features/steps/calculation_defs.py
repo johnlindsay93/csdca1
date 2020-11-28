@@ -25,5 +25,4 @@ def low(context):
 
 @then ("Bloodpressure should be Low")
 def low(context):
-    assert context.browser.current_url == 'http://127.0.0.1:5000/result'
-    assert 'Success' in context.browser.page_source
+    assert context.browser.current_url == 'http://127.0.0.1:5000/'
