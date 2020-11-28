@@ -47,7 +47,7 @@ stages:
         cliProjectName: 'GarysCA1'
         cliSources: '.'
         extraProperties: |
-         sonar.python.coverage.reportPath=$(System.DefaultWorkingDirectory)/coverage.xml
+         sonar.python.coverage.reportPaths=$(System.DefaultWorkingDirectory)/coverage.xml
       displayName: Prepare Analysis Config
 
     - script: |
