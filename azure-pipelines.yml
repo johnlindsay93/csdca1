@@ -75,7 +75,7 @@ stages:
       displayName: 'Running BDD Tests'
 
     - script: |
-        build-wrapper-linux-x86/build-wrapper-linux-x86-64 --out-dir <output directory> make clean all
+        build-wrapper-linux-x86/build-wrapper-linux-x86-64 --out-dir $(Build.ArtifactStagingDirectory) make clean all
     - task: SonarCloudAnalyze@1
     - upload: $(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip
       displayName: 'Upload package'
