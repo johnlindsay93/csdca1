@@ -56,6 +56,8 @@ stages:
         pip install -r requirements.txt
         wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
         sudo apt install ./google-chrome-stable_current_amd64.deb
+        curl 'https://sonarcloud.io/static/cpp/build-wrapper-linux-x86.zip' --output build-wrapper.zip
+        unzip build-wrapper.zip
       workingDirectory: $(projectRoot)
       displayName: "Install requirements"
 
@@ -71,7 +73,6 @@ stages:
         pip install selenium
         behave
       displayName: 'Running BDD Tests'
-
     - task: ArchiveFiles@2
       displayName: 'Archive files'
       inputs:
@@ -79,7 +80,7 @@ stages:
         includeRootFolder: false
         archiveType: zip
         archiveFile: $(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip
-        replaceExistingArchive: true
+        replaceExistingArchive: true    
     - task: SonarCloudAnalyze@1
     - upload: $(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip
       displayName: 'Upload package'
