@@ -37,7 +37,17 @@ stages:
       inputs:
         versionSpec: '$(pythonVersion)'
       displayName: 'Use Python $(pythonVersion)'
-    
+    - task: SonarCloudPrepare@1
+      inputs:
+        SonarCloud: 'Sonarcloud'
+        organization: 'garysca1'
+        scannerMode: 'CLI'
+        configMode: 'manual'
+        cliProjectKey: 'GarysCA1_GarysCA1'
+        cliProjectName: 'GarysCA1'
+        cliSources: '.'
+      displayName: Prepare Analysis Config
+
     - script: |
         python -m venv antenv
         source antenv/bin/activate
@@ -70,7 +80,7 @@ stages:
         archiveType: zip
         archiveFile: $(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip
         replaceExistingArchive: true
-
+    - task: SonarCloudAnalyze@1
     - upload: $(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip
       displayName: 'Upload package'
       artifact: drop
