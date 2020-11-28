@@ -46,6 +46,8 @@ stages:
         cliProjectKey: 'GarysCA1_GarysCA1'
         cliProjectName: 'GarysCA1'
         cliSources: '.'
+        extraProperties: |
+         sonar.python.coverage.reportPath=$(System.DefaultWorkingDirectory)/coverage.xml
       displayName: Prepare Analysis Config
 
     - script: |
@@ -65,8 +67,15 @@ stages:
         python -m pip install --upgrade pip
         pip install pytest
         pip install pytest-cov
-        python -m pytest tests/ --cov=. --cov-report=html --cov-report=xml
+        python -m pytest tests/ --junitxml=$(System.DefaultWorkingDirectory)/test.xml --cov=. --cov-report=html --cov-report=xml
       displayName: 'Running Unit Tests'
+    - task: PublishTestResults@2
+      inputs:
+        testResultsFormat: 'JUnit'
+        testResultsFiles: '**/TEST-*.xml'
+        searchFolder: '$(System.DefaultWorkingDirectory)/test.xml'
+        failTaskOnFailedTests: true
+        testRunTitle: 'Running test'
     - task: PublishCodeCoverageResults@1
       inputs:
         codeCoverageTool: 'Cobertura'
