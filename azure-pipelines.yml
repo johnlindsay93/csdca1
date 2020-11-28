@@ -67,6 +67,14 @@ stages:
         pip install pytest-cov
         python -m pytest tests/ --cov=. --cov-report=html --cov-report=xml
       displayName: 'Running Unit Tests'
+    - task: PublishCodeCoverageResults@1
+      inputs:
+        codeCoverageTool: 'Cobertura'
+        summaryFileLocation: '$(System.DefaultWorkingDirectory)/csdca1/coverage.xml'
+        pathToSources: '$(System.DefaultWorkingDirectory)/csdca1'
+        reportDirectory: '$(System.DefaultWorkingDirectory)/csdca1/htmlcov/'
+        failIfCoverageEmpty: true
+    
     - script: |
         python -m venv antenv
         source antenv/bin/activate
@@ -82,7 +90,7 @@ stages:
         archiveType: zip
         archiveFile: $(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip
         replaceExistingArchive: true    
-    - task: SonarCloudAnalyze@1
+
     - upload: $(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip
       displayName: 'Upload package'
       artifact: drop
