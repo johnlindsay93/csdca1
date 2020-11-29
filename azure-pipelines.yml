@@ -49,7 +49,7 @@ stages:
         extraProperties: |
          sonar.python.coverage.reportPaths=$(System.DefaultWorkingDirectory)/coverage.xml
          sonar.exclusions=**/*.c,**/*.cpp,**/*.objc
-         sonar.sources=$(System.DefaultWorkingDirectory)/*
+         sonar.sources=$(System.DefaultWorkingDirectory)
       displayName: Prepare Analysis Config
 
     - script: |
