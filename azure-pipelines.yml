@@ -48,7 +48,7 @@ stages:
         cliSources: '.'
         extraProperties: |
          sonar.python.coverage.reportPaths=$(System.DefaultWorkingDirectory)/coverage.xml
-         sonar.exclusions=**/*.c,**/*.cpp,**/*.objc
+         sonar.exclusions=**/*.c,**/*.cpp,**/*.objc, third-parties/lib/**/*
          sonar.sources=$(System.DefaultWorkingDirectory)
       displayName: Prepare Analysis Config
 
