@@ -115,10 +115,8 @@ stages:
   condition: succeeded()
   jobs:
   - deployment: DeploymentJob
-    environment: Dev
     pool:
       vmImage: $(vmImageName)
-
     environment: $(environmentName)
     strategy:
       runOnce:
@@ -132,5 +130,5 @@ stages:
             displayName: 'Deploy Azure Web App : '
             inputs:
               azureSubscription: $(azureServiceConnectionId)
-              appName: $(WebAppNameTest)
+              appName: johnswebapp-test
               package: $(Pipeline.Workspace)/drop/$(Build.BuildId).zip
