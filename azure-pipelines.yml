@@ -116,7 +116,7 @@ stages:
   jobs:
   - deployment: DeploymentJob
     pool:
-    vmImage: $(vmImageName)
+      vmImage: $(vmImageName)
     environment: $(environmentName)
     strategy:
       runOnce:
@@ -126,12 +126,11 @@ stages:
           - task: UsePythonVersion@0
             inputs:
               versionSpec: '$(pythonVersion)'
-          displayName: 'Use Python version'
+            displayName: 'Use Python version'
 
-         - task: AzureWebApp@1
-           displayName: 'Deploy Azure Web App : johnswebapp-test'
-           inputs:
+          - task: AzureWebApp@1
+            displayName: 'Deploy Azure Web App : '
+            inputs:
               azureSubscription: $(azureServiceConnectionId)
-              appName: $(webAppName)
+              appName: $(WebAppNameTest)
               package: $(Pipeline.Workspace)/drop/$(Build.BuildId).zip
-
