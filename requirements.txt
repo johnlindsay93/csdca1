@@ -7,5 +7,4 @@ selenium
 behave
 webdriver-manager
 pytest-cov
-startup
 gunicorn
