@@ -37,15 +37,46 @@ stages:
       inputs:
         versionSpec: '$(pythonVersion)'
       displayName: 'Use Python $(pythonVersion)'
-    
+    - task: SonarCloudPrepare@1
+      inputs:
+        SonarCloud: 'Sonarcloud'
+        organization: 'garysca1'
+        scannerMode: 'CLI'
+        configMode: 'manual'
+        cliProjectKey: 'GarysCA1_GarysCA1'
+        cliProjectName: 'GarysCA1'
+        cliSources: '.'
+        extraProperties: |
+         sonar.python.coverage.reportPaths=$(System.DefaultWorkingDirectory)/coverage.xml
+         sonar.exclusions=**/*.c,**/*.cpp,**/*.objc, Python37/**
+         sonar.sources=$(System.DefaultWorkingDirectory)
+      displayName: Prepare Analysis Config
+
     - script: |
         python -m venv antenv
         source antenv/bin/activate
         python -m pip install --upgrade pip
         pip install setup
         pip install -r requirements.txt
+        wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+        sudo apt install ./google-chrome-stable_current_amd64.deb
+        curl 'https://sonarcloud.io/static/cpp/build-wrapper-linux-x86.zip' --output build-wrapper.zip
+        unzip build-wrapper.zip
       workingDirectory: $(projectRoot)
       displayName: "Install requirements"
+    - script: |
+        python -m pip install --upgrade pip
+        pip install pytest
+        pip install pytest-cov
+        python -m pytest tests/ --junitxml=$(System.DefaultWorkingDirectory)/test.xml --cov=. --cov-report=html --cov-report=xml
+      displayName: 'Running Unit Tests'
+    - script: |
+        python -m venv antenv
+        source antenv/bin/activate
+        pip install behave
+        pip install selenium
+        behave
+      displayName: 'Running BDD Tests'
 
     - task: ArchiveFiles@2
       displayName: 'Archive files'

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/azure-pipelines_bak123.yml" line="136" mnemonic="3" />
+    <bookmark url="file://$PROJECT_DIR$/azure-pipelines_bak123.yml" line="134" mnemonic="3" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dce63941-398d-4531-9f3c-77ce5636347d" name="Default Changelist" comment="" />
@@ -37,8 +37,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/azure-pipelines_bak123.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2125">
-              <caret line="125" column="16" selection-start-line="125" selection-start-column="16" selection-end-line="125" selection-end-column="16" />
+            <state relative-caret-position="374">
+              <caret line="52" column="42" lean-forward="true" selection-start-line="39" selection-start-column="4" selection-end-line="52" selection-end-column="42" />
             </state>
           </provider>
         </entry>
@@ -511,8 +511,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/azure-pipelines_bak123.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2125">
-          <caret line="125" column="16" selection-start-line="125" selection-start-column="16" selection-end-line="125" selection-end-column="16" />
+        <state relative-caret-position="374">
+          <caret line="52" column="42" lean-forward="true" selection-start-line="39" selection-start-column="4" selection-end-line="52" selection-end-column="42" />
         </state>
       </provider>
     </entry>
