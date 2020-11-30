@@ -87,8 +87,6 @@ stages:
         failIfCoverageEmpty: true
     
     - script: |
-        python -m venv antenv
-        source antenv/bin/activate
         pip install behave
         pip install selenium
         behave
