@@ -46,7 +46,7 @@ stages:
         cliProjectKey: 'GarysCA1_GarysCA1'
         cliProjectName: 'GarysCA1'
         extraProperties: |
-         sonar.exclusions=**/*.c,**/*.cpp,**/*.objc, Python37/**
+         sonar.exclusions= antenv/lib/python3.7/site-packages
       displayName: Prepare Analysis Config
 
     - script: |
