@@ -77,7 +77,7 @@ stages:
     - task: PublishTestResults@2
       inputs:
         testResultsFormat: 'JUnit'
-        testResultsFiles: '*/reports/*.xml'
+        testResultsFiles: '$(System.DefaultWorkingDirectory)/reports/*.xml'
     - task: PublishCodeCoverageResults@1
       inputs:
         codeCoverageTool: 'Cobertura'
