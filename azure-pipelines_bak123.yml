@@ -45,6 +45,11 @@ stages:
         configMode: 'manual'
         cliProjectKey: 'GarysCA1_GarysCA1'
         cliProjectName: 'GarysCA1'
+        cliSources: '.'
+        extraProperties: |
+         sonar.python.coverage.reportPaths=$(System.DefaultWorkingDirectory)/coverage.xml
+         sonar.exclusions=**/*.c,**/*.cpp,**/*.objc, Python37/**
+         sonar.sources=$(System.DefaultWorkingDirectory)
       displayName: Prepare Analysis Config
 
     - script: |
