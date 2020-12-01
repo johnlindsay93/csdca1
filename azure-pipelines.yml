@@ -62,19 +62,29 @@ stages:
       workingDirectory: $(projectRoot)
       displayName: "Install requirements"
     - script: |
-        python -m pip install --upgrade pip
-        pip install pytest
-        pip install pytest-cov
-        python -m pytest tests/ --junitxml=$(System.DefaultWorkingDirectory)/test.xml --cov=. --cov-report=html --cov-report=xml
-      displayName: 'Running Unit Tests'
-    - script: |
         python -m venv antenv
         source antenv/bin/activate
         pip install behave
         pip install selenium
-        behave
+        behave --junit
       displayName: 'Running BDD Tests'
-
+    - script: |
+        python -m pip install --upgrade pip
+        pip install pytest
+        pip install pytest-cov
+        python -m pytest tests/ --junitxml=$(System.DefaultWorkingDirectory)/reports/test.xml --cov=. --cov-report=html --cov-report=xml
+      displayName: 'Running Unit Tests'
+    - task: PublishTestResults@2
+      inputs:
+        testResultsFormat: 'JUnit'
+        testResultsFiles: '*/reports/*.xml'
+    - task: PublishCodeCoverageResults@1
+      inputs:
+        codeCoverageTool: 'Cobertura'
+        summaryFileLocation: '$(System.DefaultWorkingDirectory)/coverage.xml'
+        pathToSources: '$(System.DefaultWorkingDirectory)'
+        reportDirectory: '$(System.DefaultWorkingDirectory)/htmlcov/'
+        failIfCoverageEmpty: true
     - task: ArchiveFiles@2
       displayName: 'Archive files'
       inputs:
