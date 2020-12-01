@@ -45,6 +45,8 @@ stages:
         configMode: 'manual'
         cliProjectKey: 'GarysCA1_GarysCA1'
         cliProjectName: 'GarysCA1'
+        extraProperties: |
+         sonar.exclusions=**/*.c,**/*.cpp,**/*.objc, Python37/**
       displayName: Prepare Analysis Config
 
     - script: |
