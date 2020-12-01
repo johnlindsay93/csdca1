@@ -46,7 +46,7 @@ stages:
         cliProjectKey: 'GarysCA1_GarysCA1'
         cliProjectName: 'GarysCA1'
         extraProperties: |
-         sonar.exclusions= */antenv/*,**/*.c,**/*.cpp,**/*.objc
+         sonar.exclusions= antenv/**/*,**/*.c,**/*.cpp,**/*.objc
       displayName: Prepare Analysis Config
 
     - script: |
