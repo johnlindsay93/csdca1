@@ -86,6 +86,8 @@ stages:
         archiveType: zip
         archiveFile: $(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip
         replaceExistingArchive: true
+    - task: SonarCloudAnalyze@1
+      displayName: "Running Sonar Cloud Analysis"
 
     - upload: $(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip
       displayName: 'Upload package'
