@@ -57,8 +57,10 @@ stages:
         pip install -r requirements.txt
         wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
         sudo apt install ./google-chrome-stable_current_amd64.deb
-        curl 'https://sonarcloud.io/static/cpp/build-wrapper-linux-x86.zip' --output build-wrapper.zip
-        unzip build-wrapper.zip
+        sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 379CE192D401AB61
+        echo "deb https://dl.bintray.com/loadimpact/deb stable main" | sudo tee -a /etc/apt/sources.list
+        sudo apt-get update
+        sudo apt-get install k6
       workingDirectory: $(projectRoot)
       displayName: "Install requirements"
     - script: |
@@ -67,6 +69,10 @@ stages:
         pip install pytest-cov
         python -m pytest tests/ --junitxml=$(System.DefaultWorkingDirectory)/test.xml --cov=. --cov-report=html --cov-report=xml
       displayName: 'Running Unit Tests'
+    - script: |
+        python -m venv antenv
+        source antenv/bin/activate
+        k6 run script.js
     - script: |
         python -m venv antenv
         source antenv/bin/activate

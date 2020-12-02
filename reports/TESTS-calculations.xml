@@ -1,0 +1,22 @@
+<testsuite errors="0" failures="0" hostname="DESKTOP-O0AB7EU" name="calculations.Calculating bloodpressure" skipped="0" tests="1" time="0.541788" timestamp="2020-12-01T20:09:53.600803"><testcase classname="calculations.Calculating bloodpressure" name="Calculating low bloodpressure" status="passed" time="0.541788"><system-out>
+<![CDATA[
+@scenario.begin
+  Scenario: Calculating low bloodpressure
+    Given I navigate to homepage ... passed in 0.192s
+    And a valid name is used ... passed in 0.087s
+    And systolic is less than 90 ... passed in 0.081s
+    And diastolic is less than 60 ... passed in 0.078s
+    When I click on Calculate Blood Pressure ... passed in 0.096s
+    Then bloodpressure should be Low ... passed in 0.008s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out><system-err>
+<![CDATA[
+Captured stderr:
+127.0.0.1 - - [01/Dec/2020 20:09:53] "GET / HTTP/1.1" 200 1831
+127.0.0.1 - - [01/Dec/2020 20:09:53] "POST / HTTP/1.1" 200 1920
+
+]]>
+</system-err></testcase></testsuite>

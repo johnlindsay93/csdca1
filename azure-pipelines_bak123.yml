@@ -69,13 +69,13 @@ stages:
         python -m pip install --upgrade pip
         pip install pytest
         pip install pytest-cov
-        python -m pytest tests/ --junitxml=$(System.DefaultWorkingDirectory)/test.xml --cov=. --cov-report=html --cov-report=xml
+        python -m pytest tests/ --junitxml=$(System.DefaultWorkingDirectory)/reports/test.xml --cov=. --cov-report=html --cov-report=xml
       displayName: 'Running Unit Tests'
     - task: PublishTestResults@2
       displayName: "Publishing Test Results"
       inputs:
         testResultsFormat: 'JUnit'
-        testResultsFiles: '$(System.DefaultWorkingDirectory)/test.xml'
+        testResultsFiles: '$(System.DefaultWorkingDirectory)/*.xml'
         failTaskOnFailedTests: true
         testRunTitle: '010'
     - task: PublishCodeCoverageResults@1
