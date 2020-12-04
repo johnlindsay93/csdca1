@@ -2,4 +2,7 @@
 
 {% block content %}
 <p> {{value}}</p>
+<div id="chart">
+    <embed type="image/svg+xml" src={{ chart|safe }} width="500"/>
+</div>
 {% endblock content %}
