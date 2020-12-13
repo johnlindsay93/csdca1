@@ -1,6 +1,7 @@
 import pygal
 from pygal import style
 
+
 def generate_gauge(systolic, diastolic):
     gauge = pygal.SolidGauge(
         half_pie=True, inner_radius=0.70,

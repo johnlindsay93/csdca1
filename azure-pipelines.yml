@@ -46,7 +46,7 @@ stages:
         cliProjectKey: 'GarysCA1_GarysCA1'
         cliProjectName: 'GarysCA1'
         extraProperties: |
-         sonar.exclusions= antenv/**/*,**/*.c,**/*.cpp,**/*.objc
+         sonar.exclusions= antenv/**/*,**/*.c,**/*.cpp,**/*.objc,tests/**,features/**
       displayName: Prepare Analysis Config
 
     - script: |
@@ -63,10 +63,6 @@ stages:
         sudo apt-get install k6
       workingDirectory: $(projectRoot)
       displayName: "Install requirements"
-    - script: |
-        python -m venv antenv
-        source antenv/bin/activate
-        k6 run script.js
     - script: |
         python -m venv antenv
         source antenv/bin/activate

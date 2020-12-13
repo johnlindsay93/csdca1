@@ -16,6 +16,6 @@ class Calculations:
                 bloodpressure = "Pre-High"
             elif diastolic_level > 90:
                 bloodpressure = "High"
-        elif systolic_level > 140 or diastolic_level > 90:
+        elif systolic_level >= 140 or diastolic_level > 90:
             bloodpressure = "High"
         return bloodpressure

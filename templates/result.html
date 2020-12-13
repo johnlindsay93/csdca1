@@ -1,7 +1,9 @@
 {%extends "base.html"%}
 
 {% block content %}
-<p> {{value}}</p>
+<div id="Result">
+    <p> {{value}}</p>
+</div>
 <div id="chart">
     <embed type="image/svg+xml" src={{ chart|safe }} width="500"/>
 </div>
