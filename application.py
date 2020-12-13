@@ -1,6 +1,5 @@
 from flask import Flask, render_template, url_for, flash, redirect, request
 from forms import BloodPressureForm
-from config import Config
 from calculations import Calculations
 from graph import generate_gauge
 from flask_wtf.csrf import CSRFProtect
@@ -18,6 +17,7 @@ def home():
     calculations = Calculations()
     if form.validate_on_submit():
         flash(f'Info Submitted for calculation for {form.name.data}!', 'Success')
+        flash(f'Your current blood pressure is:')
         systolic_level = int(request.form.get("systolic_level"))
         diastolic_level = int(request.form.get("diastolic_level"))
         gauge = generate_gauge(systolic_level, diastolic_level)
@@ -26,5 +26,5 @@ def home():
     return render_template('home.html', form=form)
 
 
-if __name__=='__main__':
+if __name__ == '__main__':
     app.run()
