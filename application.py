@@ -3,9 +3,13 @@ from forms import BloodPressureForm
 from config import Config
 from calculations import Calculations
 from graph import generate_gauge
+from flask_wtf.csrf import CSRFProtect
+
 
 app = Flask(__name__)
-app.config.from_object(Config)
+
+app.secret_key = b'ksdfglbvlsdfbos'
+csrf = CSRFProtect(app)
 
 
 @app.route('/', methods=['GET', 'POST'])
