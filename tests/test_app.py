@@ -6,8 +6,3 @@ def test_success_load(app, client):
     assert b"systolic_level" in response.data
 
 
-def test_low_result(app, client):
-    response = client.post('/', data=dict(username= "John", systolic_level="150", diastolic_lelvel="90",
-                                          submit=""), follow_redirects=True)
-    assert b"High" in response.data
-
