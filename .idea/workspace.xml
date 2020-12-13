@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dce63941-398d-4531-9f3c-77ce5636347d" name="Default Changelist" comment="" />
+    <list default="true" id="dce63941-398d-4531-9f3c-77ce5636347d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/azure-pipelines.yml" beforeDir="false" afterPath="$PROJECT_DIR$/azure-pipelines.yml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +42,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/base.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="442">
@@ -67,11 +69,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/azure-pipelines.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="680">
-              <caret line="100" column="49" selection-start-line="100" selection-start-column="49" selection-end-line="100" selection-end-column="49" />
+            <state relative-caret-position="306">
+              <caret line="48" column="96" selection-start-line="48" selection-start-column="96" selection-end-line="48" selection-end-column="96" />
             </state>
           </provider>
         </entry>
@@ -148,8 +150,8 @@
         <option value="$PROJECT_DIR$/tests/test_app.py" />
         <option value="$PROJECT_DIR$/features/calculations.feature" />
         <option value="$PROJECT_DIR$/script.js" />
-        <option value="$PROJECT_DIR$/azure-pipelines.yml" />
         <option value="$PROJECT_DIR$/application.py" />
+        <option value="$PROJECT_DIR$/azure-pipelines.yml" />
       </list>
     </option>
   </component>
@@ -176,11 +178,6 @@
               <item name="csdca1" type="b2602c69:ProjectViewProjectNode" />
               <item name="csdca1" type="462c0819:PsiDirectoryNode" />
               <item name="features" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="csdca1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="csdca1" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -341,7 +338,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1513" height="973" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18415707" />
       <window_info id="Structure" order="1" weight="0.25" />
@@ -547,13 +543,6 @@
     <entry file="file://$PROJECT_DIR$/$(System.DefaultWorkingDirectory)/reports/test.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/azure-pipelines.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="100" column="49" selection-start-line="100" selection-start-column="49" selection-end-line="100" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -582,6 +571,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
           <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/azure-pipelines.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="48" column="96" selection-start-line="48" selection-start-column="96" selection-end-line="48" selection-end-column="96" />
         </state>
       </provider>
     </entry>
